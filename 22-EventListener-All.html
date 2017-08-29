@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<style>
+div {
+    background-color: coral;
+    border: 1px solid;
+    padding: 10px;
+}
+</style>
+</head>
+<html>
+<body>
+
+<p>This example uses the addEventListener() method to execute a function when a user clicks on a button.</p>
+
+<button id="myBtn007">Try Me007</button>
+<br>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn">Try it1</button>
+<p id="demoAll">aaa</p>
+
+<br>
+
+<p>This example uses the addEventListener() method on the window object.</p>
+
+<p>Try resizing this browser window to trigger the "resize" event handler.</p>
+
+<p id="demoResize">AAA</p>
+<br>
+
+<p>This example demonstrates how to pass parameter values when using the 
+addEventListener() method.</p>
+
+<p>Click the button to perform a calculation.</p>
+
+<button id="myBtnCal">Try it2</button>
+
+<p id="demoCal">BBB</p>
+
+<br>
+
+<p>This example demonstrates the difference between bubbling and capturing when adding event listeners.</p>
+
+<div id="myDiv">
+  <p id="myP">Click this paragraph, I am Bubbling.</p>
+</div><br>
+
+<div id="myDiv2">
+  <p id="myP2">Click this paragraph, I am Capturing.</p>
+</div>
+
+<script>
+document.getElementById("myBtn007").addEventListener("click", myFunction007);
+
+function myFunction007() {
+    alert ("Hello World!");
+}
+
+
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction001);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myFunction001() {
+    document.getElementById("demoAll").innerHTML += "Moused over!<br>";
+}
+
+function mySecondFunction() {
+    document.getElementById("demoAll").innerHTML += "Clicked!<br>";
+}
+
+function myThirdFunction() {
+    document.getElementById("demoAll").innerHTML += "Moused out!<br>";
+}
+
+window.addEventListener("resize", function(){
+    document.getElementById("demoResize").innerHTML = Math.random();
+});
+
+var p1 = 5;
+var p2 = 7;
+
+document.getElementById("myBtnCal").addEventListener("click", function() {
+    myFunction(p1, p2);
+});
+
+function myFunction(p1, p2) {
+    var result = p1 * p2;
+    document.getElementById("demoCal").innerHTML = result;
+}
+
+document.getElementById("myP").addEventListener("click", function() {
+    alert("You clicked the P element!");
+}, false);
+
+document.getElementById("myDiv").addEventListener("click", function() {
+    alert("You clicked the DIV element!");
+}, false);
+
+document.getElementById("myP2").addEventListener("click", function() {
+    alert("You clicked the P element!");
+}, true);
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+    alert("You clicked the DIV element!");
+}, true);
+
+</script>
+
+</body>
+</html>

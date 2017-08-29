@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+	var aaa = new Date();
+	alert("date- ----->"+aaa);
+
+	var x = document.getElementById("demo");
+    x.style.fontSize = "25px";           
+    x.style.color = "red"; 
+
+	var y = document.getElementById("demoDivTag"); //2kb
+
+    y.style.fontSize = "25px";           
+    y.style.color = "green"; 
+
+}
+</script>
+</head>
+<body>
+
+<h1>What Can JavaScript Do?</h1>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+
+<div id="demoDivTag">By Div Tag change element.....</div>
+<br>
+<table>
+<tr>
+	<td><input type="text" id="textVal" value="Madhu..."></td>
+</tr>
+</table>
+<input type="button" value="James" onclick="myFunction()">Click Me!</input>
+
+</body>
+</html> 

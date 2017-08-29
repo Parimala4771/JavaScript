@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript">
+
+function changeContent(){
+	alert("Calling changeContent() method...");
+
+//	alert("loading...11111"); 
+	document.getElementById('demo').innerHTML = "Content Changed by Click Me..111.";
+//	alert("loading...22222"); 
+	//document.getElementById('demo').innerText = "Content Changed by Click Me...222";
+}
+
+function validateText(){
+	
+	alert("Calling validateText() method...");
+	document.getElementById('userName').innerText = "ChandBasha.Shaik...111";
+	//document.getElementById('userName').value = "ChandBasha.Shaik...222";
+}
+
+</script>
+</head>
+<body>
+
+
+
+<p id="demo">JavaScript can change HTML content.--- 29th line</p> <!-- label -->
+
+
+<button onclick="changeContent()">Click Me - 31th line</button>
+<!--<button onclick="document.getElementById('demo').innerHTML = 'Content Changed by Click Me...'">Click Me</button>-->
+
+<br><br><br><br>
+<input type="text" value="Teja" id="userName" name="" >
+<button onclick="validateText()">Click User Name-  35th line</button>
+
+<!--
+innerHTML, innerText --- label-
+innerText --- textbox -->
+
+</body>
+</html>
+
+<!-- check in IE --->
+
+<!--//can edit --- innerText
+//label -- innerText & innerHTML-->

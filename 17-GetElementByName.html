@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello World!</p>
+=====================
+<div id="main">
+	<p>The DOM is very useful. main</p>
+	<p>This example demonstrates the <b>getElementsByTagName</b> method main</p>
+</div>
+=====================
+<div id="Pranoy">
+	<p>The DOM is very useful. Monish</p>
+	<p>This example demonstrates the <b>getElementsByTagName</b> method Monish</p>
+</div>
+=====================
+
+<div id="Pranoy">
+	<p>The DOM is very useful. Pranoy</p>
+	<p>This example demonstrates the <b>getElementsByTagName</b> method Pranoy</p>
+</div>
+=====================
+<p id="demo">ABC</p>
+=====================
+
+<input type="button" value="Submit" onclick="abc()" />
+
+<script>
+function abc(){
+
+
+var x = document.getElementById("Pranoy");
+var y = x.getElementsByTagName("p");
+//alert(y[1].innerHTML+"<<<>>>"+y[1].innerText);
+document.getElementById("demo").innerText = '>>>> ' + y[1].innerText;
+
+}
+</script>
+
+</body>
+</html>

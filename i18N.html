@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <div>
+            <h1>Display </h1>
+            <div id="local"></div>
+			<div id="bombay"></div>
+			<div id="singapore"></div>
+			<div id="tokyo"></div>
+			<div id="london"></div>
+
+			<script>
+			function calcTime(city, offset) {
+			  var d = new Date();
+			  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+			  var nd = new Date(utc + (3600000 * offset));
+			  return "The local time in " + city + " is " + nd.toLocaleString();
+			}
+
+			document.getElementById('local').innerHTML = "The local time is " + (new Date()).toLocaleString();
+			document.getElementById('bombay').innerHTML = calcTime('bombay', '+5.5');
+			document.getElementById('singapore').innerHTML = calcTime('singapore', '+8');
+			document.getElementById('tokyo').innerHTML = calcTime('tokyo', '+9');
+			document.getElementById('london').innerHTML = calcTime('london', '+0');
+
+			</script>
+        </div>
+    </body>
+</html>

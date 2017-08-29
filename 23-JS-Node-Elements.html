@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+	<p>This is new.</p>
+	<p>This is new.</P>
+	<p>This is new.</p>
+	<table><tr><td>Chand</td><td>Basha</td><td>Ravali</td><td>Tripura</td><td>Swapna</td></tr></table>
+</div>
+
+
+
+<input type="button" onclick="abc()" value="Click Me..."/>
+
+<script>
+function abc(){
+alert("Click Me...");
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+element.appendChild(para);
+
+var element = document.getElementById("div1");
+var child = document.getElementById("p1");
+element.insertBefore(para,child);
+
+var parent = document.getElementById("div1");
+var child = document.getElementById("p1");
+parent.removeChild(child);
+
+var parent = document.getElementById("div1");
+var child = document.getElementById("p2");
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+parent.replaceChild(para,child);
+}
+
+</script>
+
+</body>
+</html>

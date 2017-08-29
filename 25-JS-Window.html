@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demoScreenWidth"></p>
+<p id="demoScreenHeight"></p>
+<p id="demoAvailWidth"></p>
+<p id="demoAvailHeight"></p>
+<p id="demoColorDepth"></p>
+<p id="demoPixelDepth"></p>
+
+<script>
+var w = window.innerWidth;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+alert(window.innerHeight+":::"+document.documentElement.clientHeight+":::"+document.body.clientHeight);
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+
+
+document.getElementById("demoScreenWidth").innerHTML = "Screen width is " + screen.width;
+
+document.getElementById("demoScreenHeight").innerHTML = "Screen height is " + screen.height;
+
+document.getElementById("demoAvailWidth").innerHTML = "Available screen width is " + screen.availWidth;
+
+document.getElementById("demoAvailHeight").innerHTML = "Available screen height is " + screen.availHeight;
+
+document.getElementById("demoColorDepth").innerHTML ="Screen color depth is " + screen.colorDepth;
+
+document.getElementById("demoPixelDepth").innerHTML = "Screen pixel depth is " + screen.pixelDepth;
+</script>
+
+</body>
+</html>

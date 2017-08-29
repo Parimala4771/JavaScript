@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Display the browser language.
+<button onclick="demoNavigatorLanguage()">Try it - NavigatorLanguage</button></p>
+<p id="demoNavigatorLanguage"></p>
+<br>
+
+<p>Is Java enabled?
+<button onclick="demoJavaEnabled()">Try it- Java Enabled</button></p>
+<p id="demoJavaEnabled"></p>
+<br>
+
+<p>Are cookies enabled in your browser?
+<button onclick="demoCookiesEnabled()">Try it - Cookies Enabled</button></p>
+<p id="demoCookiesEnabled"></p>
+<br>
+
+<p>What is the name(s) of your browser?
+<button onclick="demoNameBrowser()">Try it - Name Browser---1111</button></p>
+<p id="demoNameBrowser"></p>
+<br>
+
+<p>Display browser engine.
+<button onclick="demoBroserEngine()">Try it - Browser Engine</button></p>
+<p id="demoBroserEngine"></p>
+<br>
+
+<p>Display version information about the browser.
+<button onclick="demoBrowserVersion()">Try it - Browser Version</button></p>
+<p id="demoBrowserVersion"></p>
+<br>
+
+<p>Display the user-agent header sent by the browser to the server.
+<button onclick="demoBrowserAgent()">Try it - BrowserUserAgent</button></p>
+<p id="demoBrowserAgent"></p>
+<br>
+
+<p>Display browser platform.
+<button onclick="demoBroserPlatform()">Try it</button></p>
+<p id="demoBroserPlatform"></p>
+
+<script>
+function demoNavigatorLanguage() {
+    document.getElementById("demoNavigatorLanguage").innerHTML = "Browser language is " + navigator.language;
+}
+
+function demoJavaEnabled() {
+    document.getElementById("demoJavaEnabled").innerHTML = "Java enabled is " + navigator.javaEnabled();
+}
+
+function demoCookiesEnabled() {
+    document.getElementById("demoCookiesEnabled").innerHTML = "Cookies enabled is " + navigator.cookieEnabled;
+}
+
+function demoNameBrowser() {
+    document.getElementById("demoNameBrowser").innerHTML =  "Name is " + navigator.appName + "<br>Code name is " + navigator.appCodeName;
+}
+
+function demoBroserEngine() { 
+    document.getElementById("demoBroserEngine").innerHTML = "Browser engine is " + navigator.product;
+}
+
+function demoBrowserVersion() {
+    document.getElementById("demoBrowserVersion").innerHTML = navigator.appVersion;
+}
+
+function demoBrowserAgent() {
+    document.getElementById("demoBrowserAgent").innerHTML = navigator.userAgent;
+}
+
+function demoBroserPlatform() { 
+    document.getElementById("demoBroserPlatform").innerHTML = navigator.platform;
+}
+</script>
+
+</body>
+</html>

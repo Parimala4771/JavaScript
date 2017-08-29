@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body onload="a1()">
+
+<h1>JavaScript Can Validate Input</h1>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb" type="number">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo">ABC</p>
+
+<script>
+
+function a1(){
+
+	//alert("calling onload mode....789589");
+
+}
+
+function myFunction() {
+    var x, text;
+    x = document.getElementById("numb").value;
+	//alert(x);
+	// If x is Not a Number or less than one or greater than 10
+	
+	console.log("xxxxxx------->"+x);
+	//alert(isNaN(x)); // verifying the integer or char...   or and      && ||  +
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    document.getElementById("demo").innerText = text;
+
+	var age = 10;
+	var age1 = 20;
+
+	var fullAge =  age + age1;
+	alert("fullAge--->"+fullAge); //30
+	console.log("fullAge--->"+fullAge);  //developers   -- lazy --- short -- copy/paste
+
+	var name = "abc";
+	var name1 = "def";
+	var finalValue;
+
+	finalValue =  name + name1;
+	alert("finalValue--->>>"+finalValue);
+	console.log("finalValue--->"+finalValue);
+}
+</script>
+
+
+
+
+
+</body>
+</html>		
+
+
+
+
+
+

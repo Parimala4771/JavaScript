@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+/*
+            var ap = "AM";
+
+            function startTime()
+            {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+
+
+				//to add a zero in front of numbers<10
+
+                m = checkTime(m);
+                s = checkTime(s);
+
+                document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+                t = setTimeout('startTime()', 500);
+            }
+
+            window.onload = startTime;
+
+            function startTime()
+            {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+
+
+//to add AM or PM after time
+
+                if (h > 11)
+                    ap = "PM";
+                if (h > 12)
+                    h = h - 12;
+                if (h === 0)
+                    h = 12;
+
+//to add a zero in front of numbers<10
+
+                m = checkTime(m);
+                s = checkTime(s);
+
+                document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + " " + ap;
+                t = setTimeout('startTime()', 500);
+            }
+
+            function checkTime(i)
+            {
+                if (i < 10)
+                {
+                    i = "0" + i;
+                }
+                return i;
+            }
+
+            window.onload = startTime;*/
+
+            function calcTime(city, offset) {
+                var d = new Date();
+
+                utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+                var nd = new Date(utc + (3600000 * offset));
+                return "The local time in " + city + " is " + nd.toLocaleString();
+            }
+            document.getElementById('india').innerHTML = calcTime('India', '+5.5') ;
+            document.getElementById('singapore').innerHTML = calcTime('Singapore', '+8') ;
+            document.getElementById('tokyo').innerHTML = calcTime('Tokyo', '+9') ;
+            document.getElementById('london').innerHTML = calcTime('London', '+0');
+            window.onload=calcTime();
+        </script>
+    </head>
+    <body>
+        <div>
+            <table border="1">
+                <tr>
+                    <td>Country</td>
+                    <td>Time</td>
+                </tr>
+                <tr>
+                    <td>India</td>
+                    <td><div id="india"> </div></td>
+                </tr>
+                <tr>
+                    <td>Singapore</td>
+                    <td><div id="singapore"></div></td>
+                </tr>
+                <tr>
+                    <td>Tokyo</td>
+                    <td><div id="tokyo"></div></td>
+                </tr>
+                <tr>
+                    <td>London</td>
+                    <td><div id="london"></div></td>
+                </tr>
+                <tr>
+                    <td>New York</td>
+                    <td><div id="clock"></div></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

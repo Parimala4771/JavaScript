@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello World!</p>
+
+<p>How many paragraphs in this document?</p>
+
+<p>This example demonstrates the length property of a nodelist.</p>
+
+<p id="demo"></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+var myNodelist = document.getElementsByTagName("p");
+document.getElementById("demo").innerHTML = myNodelist.length; //4
+
+
+function myFunction() {
+    var myNodelist = document.getElementsByTagName("p");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) { // for(i = 0; i<4; i++) 0  true 1
+		myNodelist[i].style.backgroundColor = "red";
+		if(i == 2){
+			myNodelist[i].style.backgroundColor = "yellow";
+		}
+		
+		
+    }
+}
+
+</script>
+
+</body>
+</html>
+
+<!--
+
+odd
+
+even
+
+-->

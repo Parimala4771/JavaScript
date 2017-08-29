@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Display the entire URL of the current page.</p>
+
+<p id="demo"></p>
+<p id="demoHostName"></p>
+
+<p id="demoPathName"></p>
+<p id="demoProtocol"></p>
+
+<input type="button" value="Load new document" onclick="newDoc()">
+<br>
+<input type="button" value="Back" onclick="goBack()">
+<br>
+<input type="button" value="Forward" onclick="goForward()">
+
+<script>
+document.getElementById("demo").innerHTML = "Page location is: " + window.location.href;
+
+document.getElementById("demoHostName").innerHTML = "Page hostname is: " + window.location.hostname;
+
+document.getElementById("demoPathName").innerHTML = "Page path is: " + window.location.pathname;
+
+document.getElementById("demoProtocol").innerHTML = "Page protocol is: " + window.location.protocol;
+
+function newDoc() {
+    window.location.assign("http://www.google.com")
+}
+
+function goBack() {
+    window.history.back()
+}
+
+function goForward() {
+    window.history.forward()
+}
+</script>
+
+</body>
+</html>

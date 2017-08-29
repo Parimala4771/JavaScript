@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function abc(){
+	var val= '100';
+	alert("calling abc ()...."+val);
+	//own logic....
+	document.getElementById("demo").innerHTML = "James";
+	document.getElementById("demo").style.fontSize = "100px";
+	console.log();
+}
+</script>
+
+</head>
+<body onload="abc()">
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph.</p>
+
+<p id="demo">ABC</p>
+
+	<table border=1>
+		<tr>
+			<td style="background-color:red">Parimala</td><td>India</td>
+		</tr>
+		<tr>
+			<td>Devi</td><td id="demo1">USA</td>
+		</tr>
+		<tr>
+			<td colspan=1 align="center"><p>ABC</p></td>
+		</tr>
+		<tr>
+			<td colspan=2 align="center"><button type="button" onclick="document.getElementById('demo1').innerHTML = new Date()">Click me to display Date and Time...</button></td>
+		</tr>
+	</table>
+
+</body>
+</html> 

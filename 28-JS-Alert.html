@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display an alert box:
+<button onclick="myAlert()">Try it</button></p>
+<br><br>
+
+<p>Click the button to display a confirm box.
+<button onclick="myConfirm()">Try it</button></p>
+<br><br>
+
+<p>Click the button to demonstrate line-breaks in a popup box.
+<button onclick="myLineBreak()">Try it</button></p>
+<br><br>
+
+<p>Click the button to demonstrate the prompt box.
+<button onclick="myPrompt()">Try it</button></p>
+<br><br>
+
+<p id="demoConfirm"></p>
+<p id="demoPrompt"></p>
+<p id="demoPrompt"></p>
+<script>
+function myAlert() {
+    alert("I am an alert box!");
+}
+
+function myConfirm() {
+    var x;
+    if (confirm("Press a button!") == true) {
+        x = "You pressed OK!";
+    } else {
+        x = "You pressed Cancel!";
+    }
+    document.getElementById("demoConfirm").innerHTML = x;
+}
+
+function myPrompt() {
+    var person = prompt("Please enter your name", "ChandBasha.Shaik");
+    
+    if (person != null) {
+        document.getElementById("demoPrompt").innerHTML = "Hello " + person + "! How are you today?";
+    }
+}
+
+function myLineBreak() {
+    alert("Hello\nHow are you?");
+}
+</script>
+
+</body>
+</html>

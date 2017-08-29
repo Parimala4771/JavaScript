@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo1").innerHTML = "Demo1--- >"+d;
+
+//
+var d = new Date(99,5,24);
+document.getElementById("demo2").innerHTML =  "Demo2--- >"+d;
+
+
+//
+var d = new Date("October 13, 2014 11:13:00");
+document.getElementById("demo3").innerHTML = "Demo3--- >"+ d;
+
+//
+var d = new Date(86400000);
+document.getElementById("demo4").innerHTML =  "Demo4--- >"+d;
+
+//
+var d = new Date(99,5,24,11,33,30,0);
+document.getElementById("demo5").innerHTML =  "Demo5--- >"+d;
+
+//
+document.getElementById("demo6").innerHTML =  "Demo6--- >"+ Date();
+</script>
+
+</body>
+</html>
+

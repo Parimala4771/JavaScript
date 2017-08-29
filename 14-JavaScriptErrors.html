@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+A<p id="demo"></p>A
+
+<script>
+try {
+    
+	var age=0;
+	alert(age);
+
+
+	if(age == 'infity'){
+		//B.L
+		alert("entering into if......");
+	}else if(age == 0){
+			alert("entering into else if......");
+	}else{
+		alert("entering into else......");
+	}
+	
+	addAlert("Calling customized method...!");
+
+}
+catch(err) {
+	alert(err);
+    document.getElementById("demo").innerHTML = "not defined method : getting Arthmetic exception ";
+}
+
+function addAlert(name){
+	alert(name);
+}
+
+
+</script>
+
+</body>
+</html>
